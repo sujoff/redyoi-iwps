@@ -86,3 +86,5 @@ repository for NDA reasons, they should be placed in project root directory)
 
 ## Files
 - `appsettings.json`, `nginx.conf`, `.gitignore`, `app.prod.yml`, `deploy.sh`, `load_images.sh`, `start.sh`, `iwpms_client.tar`, `iwpms_server.tar`
+
+Done 🕺💃💃🕺🥂💦💦
