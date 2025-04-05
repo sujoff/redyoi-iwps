@@ -7,7 +7,7 @@
 ## Infrastructure
 - Web Server: 'appserver2' (192.168.8.72)
 - Database Server: 'database2' (192.168.8.79)
-- Username: 'aramco'
+- Username: 'testuser'
 
 ## Pre-Requisites
 - Ubuntu: 24.04.1 LTS
@@ -19,6 +19,9 @@
 
 ## Setup
 
+⚠️ Note : two docker image (i.e iwpms_client.tar and iwpms_server.tar has been excluded from the
+repository for NDA reasons)
+
 ### Web Server ('appserver2')
 1. Install Ubuntu 24.04.1 LTS.
 2. Install Docker:
@@ -29,14 +32,14 @@
    ```
 3. Create directory:
    ```bash
-   mkdir /home/aramco/iwpms && cd /home/aramco/iwpms
+   mkdir /home/testuser/iwpms && cd /home/testuser/iwpms
    ```
 4. Download artifacts: `iwpms_client.tar`, `iwpms_server.tar`, `files/`, `load_images.sh`, `start.sh`, `deploy.sh`, `app.prod.yml`.
 5. Generate HTTPS certificates:
    ```bash
-   cd /home/aramco/iwpms/files/cert
+   cd /home/testuser/iwpms/files/cert
    openssl genrsa -out ca.key 2048
-   openssl req -x509 -new -nodes -key ca.key -sha256 -days 1095 -out ca.crt -subj "/C=SA/ST=Riyadh/O=Aramco/CN=AramcoLocalCA"
+   openssl req -x509 -new -nodes -key ca.key -sha256 -days 1095 -out ca.crt -subj "/C=SA/ST=Riyadh/O=testuser/CN=testuserLocalCA"
    ```
 6. Deploy:
    ```bash
