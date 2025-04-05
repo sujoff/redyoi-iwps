@@ -69,6 +69,8 @@ repository for NDA reasons, they should be placed in project root directory)
 
 ## Post-Deployment
 1. Access: `https://192.168.8.72` (Email: `admin@yourcompany.com`, Password: `Test123!`).
+![login page](image.png) ![Work permits](image-1.png)
+
 2. Delete temp admin:
    ```bash
    mongosh
