@@ -1,0 +1,29 @@
+services:
+  ui:
+    image: iwpms_client:latest
+    pull_policy: never
+    ports:
+      - "443:443"
+      - "5001:5001"
+    volumes:
+      - ./files/nginx.conf:/etc/nginx/nginx.conf
+      - ./files/cert/iwpms.crt:/etc/nginx/cert/iwpms.crt
+      - ./files/cert/iwpms.key:/etc/nginx/cert/iwpms.key
+    networks:
+      - iwpmsnetwork
+
+  webapi:
+    image: iwpms_server:latest
+    pull_policy: never
+    environment:
+      - TZ=Asia/Riyadh
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:80
+    volumes:
+      - ./files/appsettings.json:/app/appsettings.json
+    networks:
+      - iwpmsnetwork
+
+networks:
+  iwpmsnetwork:
+    driver: bridge
