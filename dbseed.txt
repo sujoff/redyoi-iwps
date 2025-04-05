@@ -1,0 +1,67 @@
+// Create a temp admin user with below command, password for the user is 
+Test123!
+ db.getCollection('users').insertOne({
+ _id: '0dcf8aa5-5a25-4553-a8b0-7cf2bfe9c35d',
+ UserName: 'admin@testuser.com',
+ NormalizedUserName: 'ADMIN@testuser.COM',
+ Email: 'admin@testuser.com',
+ NormalizedEmail: 'ADMIN@testuser.COM',
+ EmailConfirmed: false,
+ PasswordHash: 
+'AQAAAAIAlkdhflkdshlkfslat80ApsOwYWY9st+OvksxJsbZxzguekG58D/6Iu
+ q6IQ==',
+ SecurityStamp: 'KIUFCGUPXKOVDdfsdakfksdahflkasdJBYIYWGGI',
+ ConcurrencyStamp: '429ffdkldsflksdahlkf86965c475462',
+ PhoneNumber: null,
+ PhoneNumberConfirmed: false,
+ TwoFactorEnabled: false,
+ LockoutEnd: null,
+ LockoutEnabled: true,
+ AccessFailedCount: 0,
+ Version: 1,
+ CreatedOn: ISODate('2024-10-20T17:22:29.883Z'),
+ Claims: [
+ {
+ Type: 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name',
+ Value: 'Admin',
+ Issuer: null
+ },
+ {
+ Type: 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress',
+ Value: 'admin@testuser.com',
+ Issuer: null
+ }
+ ],
+ Roles: [ 'Admin' ],
+ Logins: [],
+ Tokens: [],
+ TenantId: null,
+ IsActive: true,
+ PreviousLoginTimestamp: null,
+ LatestLoginTimestamp: null,
+ LogoutTimestamp: null
+ });
+ // Create a participant for the user
+ db.getCollection('participants').insertOne({
+ _id: 'dc68b881-a9ae-4c80-8acc-5c5ee1ba1b07',
+ Name: 'Admin',
+ UserId: 'admin',
+ ProfilePicture: '',
+Email: 'admin@testuser.com',
+ Description: '',
+ MobileNo: { CountryCode: '+966', Number: '9999999999' },
+ Address: '',
+ ContractorId: '',
+ SupervisorId: '',
+ CompanyId: '',
+ InternalDepartmentId: '',
+ Type: 'Admin',
+ Attachments: null,
+ DisciplineId: '',
+ CreatedBy: 'system',
+ CreatedAt: ISODate('2024-11-17T17:34:16.435Z'),
+ UpdatedBy: 'system',
+ UpdatedAt: ISODate('2024-11-17T17:34:16.435Z'),
+ LoginEnabled: true,
+ IsActive: true
+ });
