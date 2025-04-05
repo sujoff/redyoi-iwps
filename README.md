@@ -2,6 +2,7 @@
 
 ## Overview
 - Web-based app for work permit management deployed on Ubuntu 24.04.x LTS.
+This project is part of aramco pkg -11 implementation
 
 ## Infrastructure
 - Web Server: 'appserver2' (192.168.8.72)
