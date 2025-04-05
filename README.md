@@ -1,8 +1,7 @@
-```markdown
 # IWPMS Deployment
 
 ## Overview
-- Web-based app for work permit management on Ubuntu 24.04.1 LTS.
+- Web-based app for work permit management deployed on Ubuntu 24.04.x LTS.
 
 ## Infrastructure
 - Web Server: 'appserver2' (192.168.8.72)
@@ -20,16 +19,16 @@
 ## Setup
 
 ⚠️ Note : two docker image (i.e iwpms_client.tar and iwpms_server.tar has been excluded from the
-repository for NDA reasons)
+repository for NDA reasons, they should be placed in project root directory)
 
 ### Web Server ('appserver2')
 1. Install Ubuntu 24.04.1 LTS.
 2. Install Docker:
-   ```bash
-   sudo apt update && sudo apt install -y docker.io docker-buildx-plugin docker-compose-plugin
-   sudo systemctl start docker && sudo systemctl enable docker
-   sudo usermod -aG docker $USER
-   ```
+  </br>
+   `sudo apt update && sudo apt install -y docker.io docker-buildx-plugin docker-compose-plugin`
+   `sudo systemctl start docker && sudo systemctl enable docker`
+   `sudo usermod -aG docker $USER`
+   
 3. Create directory:
    ```bash
    mkdir /home/testuser/iwpms && cd /home/testuser/iwpms
@@ -69,12 +68,12 @@ repository for NDA reasons)
    ```
 
 ## Post-Deployment
-1. Access: `https://192.168.8.72` (Email: `admin@dualroots.com`, Password: `Test123!`).
+1. Access: `https://192.168.8.72` (Email: `admin@yourcompany.com`, Password: `Test123!`).
 2. Delete temp admin:
    ```bash
    mongosh
    use iwpms
-   db.getCollection('users').deleteOne({ 'NormalizedEmail': 'ADMIN@DUALROOTS.COM' })
+   db.getCollection('users').deleteOne({ 'NormalizedEmail': 'ADMIN@YOURCOMPANY.COM' })
    ```
 
 ## Cleanup
