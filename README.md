@@ -64,7 +64,7 @@ repository for NDA reasons, they should be placed in project root directory)
    ```bash
    mongosh
    use iwpms
-   db.getCollection('users').insertOne({...})
+   <copy paster from dbseed.txt above>
    ```
 
 ## Post-Deployment
@@ -76,11 +76,10 @@ repository for NDA reasons, they should be placed in project root directory)
    db.getCollection('users').deleteOne({ 'NormalizedEmail': 'ADMIN@YOURCOMPANY.COM' })
    ```
 
-## Cleanup
+## Cleanup/Troubleshooting time
 - ```bash
   docker compose -f app.prod.yml down
   ```
 
 ## Files
 - `appsettings.json`, `nginx.conf`, `.gitignore`, `app.prod.yml`, `deploy.sh`, `load_images.sh`, `start.sh`, `iwpms_client.tar`, `iwpms_server.tar`
-```
