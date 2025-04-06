@@ -8,7 +8,7 @@ This project is part of aramco pkg -11 implementation
 ## Infrastructure
 - Web Server: 'appserver2' (192.168.8.72)
 - Database Server: 'database2' (192.168.8.79)
-- Username: 'testuser'
+- Username: 'testuser' (our project has used user 'aramco' fyi)
 
 Virtualization:
 KVM/qemu based machines. </br>
