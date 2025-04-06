@@ -34,7 +34,7 @@ Dashboard - Cockpit
 repository for NDA reasons, they should be placed in project root directory)
 
 </br>
-![alt text](<Screenshot 2025-04-03 155853.png>)
+![project structure](<Screenshot 2025-04-03 155853.png>)
 </br>
 
 ### Web Server ('appserver2')
