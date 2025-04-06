@@ -37,13 +37,12 @@ repository for NDA reasons, they should be placed in project root directory)
 
 
 ### Web Server ('appserver2')
+
 1. Install Ubuntu 24.04.1 LTS.
 2. Install Docker:
-  </br>
    `sudo apt update && sudo apt install -y docker.io docker-buildx-plugin docker-compose-plugin`
    `sudo systemctl start docker && sudo systemctl enable docker`
-   `sudo usermod -aG docker $USER`
- </br>  
+   `sudo usermod -aG docker $USER`  
 3. Create directory:
    ```bash
    mkdir /home/testuser/iwpms && cd /home/testuser/iwpms
