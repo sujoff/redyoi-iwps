@@ -33,9 +33,8 @@ Dashboard - Cockpit
 ⚠️ Note : two docker image (i.e iwpms_client.tar and iwpms_server.tar has been excluded from the
 repository for NDA reasons, they should be placed in project root directory)
 
-</br>
 ![project structure](<Screenshot 2025-04-03 155853.png>)
-</br>
+
 
 ### Web Server ('appserver2')
 1. Install Ubuntu 24.04.1 LTS.
