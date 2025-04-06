@@ -11,9 +11,8 @@ This project is part of aramco pkg -11 implementation
 - Username: 'testuser'
 
 Virtualization:
-KVM/qemu based machines.
-Dashboard - Cockpit 
-</br>
+KVM/qemu based machines. </br>
+Dashboard - Cockpit ( Image attached below) </br>
 
 ![cockpit vm for reference](image-2.png)
 
