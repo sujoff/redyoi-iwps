@@ -12,7 +12,7 @@ This project is part of aramco pkg -11 implementation
 
 Virtualization:
 KVM/qemu based machines. </br>
-Dashboard - Cockpit ( Image attached below) </br>
+Dashboard - Cockpit ( Image attached here) </br>
 
 ![cockpit vm for reference](image-2.png)
 
@@ -39,9 +39,9 @@ repository for NDA reasons, they should be placed in project root directory)
 
 1. Install Ubuntu 24.04.1 LTS.
 2. Install Docker:
-   `sudo apt update && sudo apt install -y docker.io docker-buildx-plugin docker-compose-plugin`
-   `sudo systemctl start docker && sudo systemctl enable docker`
-   `sudo usermod -aG docker $USER`  
+   `sudo apt update && sudo apt install -y docker.io docker-buildx-plugin docker-compose-plugin`</br>
+   `sudo systemctl start docker && sudo systemctl enable docker`</br>
+   `sudo usermod -aG docker $USER`</br>  
 3. Create directory:
    ```bash
    mkdir /home/testuser/iwpms && cd /home/testuser/iwpms
