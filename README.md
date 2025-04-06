@@ -59,10 +59,10 @@ repository for NDA reasons, they should be placed in project root directory)
    ./deploy.sh
    ```
 7. Verify Running Containers.
-</br>
+
 Run `docker ps `
  Here, you should see two container (server & client) up and running successfully, if not, check the logs with (docker logs <container-id>).
- </br>
+ 
 ### Database Server ('database2')
 1. Install Ubuntu 24.04.1 LTS.
 2. Install MongoDB:
@@ -84,12 +84,10 @@ Run `docker ps `
    use iwpms
    <copy paste from dbseed.txt above>
    ```
-</br>
 ## Post-Deployment
-1. Access: `https://192.168.8.72` (Email: `admin@yourcompany.com`, Password: `Test123!`).
-</br>
+1. Access: `https://192.168.8.72` (Email: `admin@yourcompany.com`, Password: `Test123!`). Now create new admin user with administrator privilege.
+
 ![login page](image.png)
- </br>
 ![Work permits](image-1.png)
 
 2. Delete temp admin:
