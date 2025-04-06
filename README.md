@@ -63,7 +63,8 @@ repository for NDA reasons, they should be placed in project root directory)
 Run `docker ps `
  Here, you should see two container (server & client) up and running successfully, if not, check the logs with (docker logs <container-id>).
  
-### Database Server ('database2')
+## Database Server ('database2'):
+
 1. Install Ubuntu 24.04.1 LTS.
 2. Install MongoDB:
    ```bash
