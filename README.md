@@ -10,6 +10,16 @@ This project is part of aramco pkg -11 implementation
 - Database Server: 'database2' (192.168.8.79)
 - Username: 'testuser'
 
+Virtualization:
+KVM/qemu based machines.
+Dashboard - Cockpit 
+</br>
+
+![cockpit vm for reference](image-2.png)
+
+
+</br>
+
 ## Pre-Requisites
 - Ubuntu: 24.04.1 LTS
 - MongoDB: 7.0.7
@@ -23,6 +33,10 @@ This project is part of aramco pkg -11 implementation
 ⚠️ Note : two docker image (i.e iwpms_client.tar and iwpms_server.tar has been excluded from the
 repository for NDA reasons, they should be placed in project root directory)
 
+</br>
+![alt text](<Screenshot 2025-04-03 155853.png>)
+</br>
+
 ### Web Server ('appserver2')
 1. Install Ubuntu 24.04.1 LTS.
 2. Install Docker:
@@ -30,7 +44,7 @@ repository for NDA reasons, they should be placed in project root directory)
    `sudo apt update && sudo apt install -y docker.io docker-buildx-plugin docker-compose-plugin`
    `sudo systemctl start docker && sudo systemctl enable docker`
    `sudo usermod -aG docker $USER`
-   
+ </br>  
 3. Create directory:
    ```bash
    mkdir /home/testuser/iwpms && cd /home/testuser/iwpms
@@ -46,7 +60,11 @@ repository for NDA reasons, they should be placed in project root directory)
    ```bash
    ./deploy.sh
    ```
-
+7. Verify Running Containers.
+</br>
+Run `docker ps `
+ Here, you should see two container (server & client) up and running successfully, if not, check the logs with (docker logs <container-id>).
+ </br>
 ### Database Server ('database2')
 1. Install Ubuntu 24.04.1 LTS.
 2. Install MongoDB:
@@ -66,12 +84,14 @@ repository for NDA reasons, they should be placed in project root directory)
    ```bash
    mongosh
    use iwpms
-   <copy paster from dbseed.txt above>
+   <copy paste from dbseed.txt above>
    ```
-
+</br>
 ## Post-Deployment
 1. Access: `https://192.168.8.72` (Email: `admin@yourcompany.com`, Password: `Test123!`).
-![login page](image.png) </br>
+</br>
+![login page](image.png)
+ </br>
 ![Work permits](image-1.png)
 
 2. Delete temp admin:
